@@ -8,3 +8,7 @@ logoHeading.addEventListener('mouseover', () => {
     3000
     );
 });
+
+window.addEventListener('keydown', () => {
+    document.location.reload();
+})
