@@ -1,5 +1,4 @@
 // Your code goes here
-console.log('Press any Key to refresh page.')
 const logoHeading = document.querySelector('.logo-heading');
 logoHeading.addEventListener('mouseover', () => {
     logoHeading.animate({
@@ -49,3 +48,29 @@ document.addEventListener('drop', (event) => {
         console.log('Have Fun!');
     }
 }, false);
+
+window.addEventListener('load', (event) => {
+    console.log("Let's Get Started!");
+    console.log('Press any Key to refresh page.')
+
+});
+
+const funBusImg = document.querySelector('.intro img');
+funBusImg.addEventListener('click', (event) => {
+    funBusImg.style.visibility = 'hidden';
+    console.log('Dbl Click to redisplay IMG');
+});
+
+
+window.addEventListener('dblclick', (event) => {
+    funBusImg.style.visibility = '';
+});
+
+funBusImg.addEventListener('auxclick', (event) => {
+    if (funBusImg.style.width == '100%') {
+        funBusImg.style.width = '50%';
+    }
+    else {
+        funBusImg.style.width = '100%';
+    }
+});
