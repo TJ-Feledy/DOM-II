@@ -1,6 +1,6 @@
 // Your code goes here
 const logoHeading = document.querySelector('.logo-heading');
-logoHeading.addEventListener('mouseover', () => {
+logoHeading.addEventListener('mouseover', (event) => {
     logoHeading.animate({
         opacity: [0,1],
         backgroundColor: ['white', 'lightgray','darkgray'],
@@ -8,6 +8,16 @@ logoHeading.addEventListener('mouseover', () => {
     },
     3000
     );
+});
+
+const header = document.querySelector('header');
+header.addEventListener('click', (event) => {
+    header.style.background = 'lightgray';
+});
+const headerNav = document.querySelector('header nav');
+headerNav.addEventListener('click', (event) => {
+    headerNav.style.background = 'darkgray';
+    event.stopPropagation();
 });
 
 window.addEventListener('keydown', () => {
@@ -74,3 +84,4 @@ funBusImg.addEventListener('auxclick', (event) => {
         funBusImg.style.width = '100%';
     }
 });
+
